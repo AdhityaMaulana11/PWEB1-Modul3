@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Hotel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #444;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav ul li:hover>a {
+            background-color: #555;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #666;
+            list-style-type: none;
+            min-width: 200px;
+            z-index: 1;
+        }
+
+        nav ul li:hover>ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            position: relative;
+        }
+
+        nav ul li ul li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #777;
+            min-width: 200px;
+        }
+
+        nav ul li ul li:hover>ul {
+            display: block;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .sidebar {
+            display: grid;
+            gap: 10px;
+        }
+
+        .sidebar img {
+            width: 100%;
+            height: auto;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Best Hotel</h1>
+        <img src="./img/header.png" alt="header img" width="65%" height="150px">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Kamar</a></li>
+            <li><a href="#">Fasilitas</a>
+                <ul>
+                    <li><a href="#">Petualangan Alam</a></li>
+                    <li><a href="#">Kolam Renang</a>
+                        <ul>
+                            <li><a href="#">Sumber Air Panas</a></li>
+                            <li><a href="#">Kolam Anak & Dewasa</a>
+                                <ul>
+                                    <li><a href="#">Reguler</a></li>
+                                    <li><a href="#">Premium</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pusat Kebugaran</a></li>
+                    <li><a href="#">Ruang Rapat</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pesan Sekarang</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="sidebar">
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/5jsAsamJeWE?si=Ztp9uxzAGwmlPp8
+Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strictorigin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/VohAVMNkZdY?si=qnBZHl4kyAPbpcY"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strictorigin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="320" height="200" src="https://www.youtube.com/embed/qemqQHaeCYo?si=ytjtEm3vIgsrf2v-"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="content">
+            <img src="img/images2.jpg" alt="Room Photo 2">
+            <img src="img/images2.jpg" alt="Room Photo 2">
+            <img src="img/images4.jpg" alt="Room Photo 4">
+            <img src="img/images5.jpg" alt="Room Photo 5">
+            <img src="img/images6.jpg" alt="Room Photo 6">
+            <img src="img/images2.jpg" alt="Room Photo 2">
+            <img src="img/images7.jpg" alt="Room Photo 7">
+            <img src="img/images8.jpg" alt="Room Photo 8">
+            <img src="img/images8.jpg" alt="Room Photo 8">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Queen Best Hotel</p>
+    </footer>
+</body>
+
+</html>

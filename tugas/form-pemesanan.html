@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 800px;
+            background-color: #dddddd;
+            padding: 1rem;
+        }
+
+        th {
+            padding: 10px;
+            text-align: left;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-simpan {
+            background-color: #586ff0;
+            color: white;
+            border: none;
+        }
+
+        .btn-batal {
+            background-color: #ffd036;
+            border: none;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" method="">
+        <table>
+            <tr>
+                <th colspan="2">
+                    <h1>Form Pemesanan</h1>
+                </th>
+            </tr>
+            <tr>
+                <td>Id Pemesan</td>
+                <td><input type="number" name="id_pemesan" required></td>
+            </tr>
+            <tr>
+                <td>Nama Pemesan</td>
+                <td><input type="text" name="nama_pemesan" required></td>
+            </tr>
+            <tr>
+                <td>Nomor Identitas</td>
+                <td><input type="number" name="nomor_identitas" required></td>
+            </tr>
+            <tr>
+                <td>Tipe Kamar</td>
+                <td>
+                    <select name="tipe_kamar" required>
+                        <option value="-">--Pilih--</option>
+                        <option value="standar">STANDAR</option>
+                        <option value="deluxe">DELUXE</option>
+                        <option value="family">FAMILY</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Harga</td>
+                <td><input type="text" name="harga_kamar"></td>
+            </tr>
+            <tr>
+                <td>Tanggal Pesan</td>
+                <td><input type="date" name="tanggal_pesan" required></td>
+            </tr>
+            <tr>
+                <td>Durasi Menginap</td>
+                <td><input type="number" name="nilai_tugas" required><span> Hari</span></td>
+            </tr>
+            <tr>
+                <td>Termasuk Breakfast</td>
+                <td class="checkbox-group">
+                    <label><input type="checkbox" name="breakfast" required> Ya</label>
+                    <label><input type="checkbox" name="breakfast" required> Tidak</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Bayar</td>
+                <td><input type="text" name="total_bayar"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit" class="btn-simpan">SIMPAN</button>
+                    <button type="reset" class="btn-batal">Batal</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
